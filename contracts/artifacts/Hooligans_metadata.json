@@ -760,11 +760,11 @@
 			]
 		},
 		"contracts/HooligansNFT.sol": {
-			"keccak256": "0x3b91122aa04a06acfc7883342ed1008cd2490ac7e86b3f816434c32f3af486e1",
+			"keccak256": "0xfb17c387c0d4117a51bdf930235289dc084cb736a2fdc75268519d1ee43f788e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5a2a1e3f900cf9af73c003ae289f76d4c683c1f6005e8ad244b306e1a56a1307",
-				"dweb:/ipfs/QmdN2zGDe8uEvEyVy3mBhTK7dh5PdZASHNWTDbWbTGHyQf"
+				"bzz-raw://849fbb57e4aa3574e1b86cceda17340c474509f9feb8c5b40ad41b1d71d7d620",
+				"dweb:/ipfs/Qmdsgt64d3bwkrXQpjBupijyk64paHBb3eBUwoT83RsGSm"
 			]
 		}
 	},

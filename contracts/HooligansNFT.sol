@@ -23,7 +23,7 @@ contract Hooligans is ERC721, ERC721Enumerable, Ownable {
     }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://bafybeiey6x74pi3xbbldac3kcqwy7ozpat3aufmruwfw5j33s6mow6nsca/";
+        return "ipfs://bafybeifdvpjpgyjfiofbtzxtpna3yznf4veethgzroxqmvba6ja2qssvkq/";
     }
 
     function editMintWindows(
