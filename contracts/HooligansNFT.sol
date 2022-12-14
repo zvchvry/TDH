@@ -46,13 +46,13 @@ contract Hooligans is ERC721, ERC721Enumerable, Pausable, Ownable {
     function allowListMint() public payable {
         require(allowListMintOpen, "CLOSED");
         require(allowList[msg.sender], "NOPE, try the public mint");
-        require(msg.value == 0.00 ether, "Not enough cash");
+        require(msg.value == 0.00 ether, "You'll have to add more than that");
         repMint();
     }
 
     function publicMint() public payable {
         require(publicMintOpen, "CLOSED");
-        require(msg.value == 0.01 ether, "Not enough cash");
+        require(msg.value == 0.01 ether, "You'll have to add more than that");
         repMint();
     }
 
