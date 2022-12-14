@@ -10,12 +10,21 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 contract Hooligans is ERC721, ERC721Enumerable, Pausable, Ownable {
     using Counters for Counters.Counter;
 
+    uint256 public maxSupply = 420;
+
+    bool public publicMintOpen = false;
+    bool public allowListMintOpen = false;
+
+    mapping(address => bool) public allowList;
+
+
     Counters.Counter private _tokenIdCounter;
 
-    constructor() ERC721("Hooligans", "HLGNS") {}
+    constructor() payable ERC721("Those Damn Hooligans", "HLGNS") {
+    }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://bafybeiey6x74pi3xbbldac3kcqwy7ozpat3aufmruwfw5j33s6mow6nsca";
+        return "ipfs://bafybeiey6x74pi3xbbldac3kcqwy7ozpat3aufmruwfw5j33s6mow6nsca/";
     }
 
     function pause() public onlyOwner {
@@ -26,11 +35,44 @@ contract Hooligans is ERC721, ERC721Enumerable, Pausable, Ownable {
         _unpause();
     }
 
+    function editMintWindows(
+        bool _publicMintOpen,
+        bool _allowListMintOpen
+    ) external onlyOwner {
+        publicMintOpen = _publicMintOpen;
+        allowListMintOpen = _allowListMintOpen;
+    }
+
+    function allowListMint() public payable {
+        require(allowListMintOpen, "CLOSED");
+        require(allowList[msg.sender], "NOPE, try the public mint");
+        require(msg.value == 0.00 ether, "Not enough cash");
+        repMint();
+    }
+
     function publicMint() public payable {
-        require(msg.value == .00333 ether, "Not enough dough");
-        uint256 tokenId = _tokenIdCounter.current();
+        require(publicMintOpen, "CLOSED");
+        require(msg.value == 0.01 ether, "Not enough cash");
+        repMint();
+    }
+
+    function repMint() internal {
+        require(totalSupply() < maxSupply, "SOLD OUT");
+        uint256 tokenId = _tokenIdCounter.current() + 1;
         _tokenIdCounter.increment();
         _safeMint(msg.sender, tokenId);
+    }
+
+function withdraw(address _addr) external onlyOwner{
+    uint256 balance = address(this).balance;
+    payable(_addr).transfer(balance);
+}
+
+    function setAllowList(address[] calldata addresses) external onlyOwner {
+        for(uint256 i = 0; i < addresses.length; i++){
+            allowList[addresses[i]] = true;
+        }
+
     }
 
     function _beforeTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)

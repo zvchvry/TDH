@@ -7,7 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "constructor"
 			},
 			{
@@ -134,6 +134,45 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "allowList",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "allowListMint",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "allowListMintOpen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "to",
 						"type": "address"
 					},
@@ -165,6 +204,24 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "_publicMintOpen",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "_allowListMintOpen",
+						"type": "bool"
+					}
+				],
+				"name": "editMintWindows",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -205,6 +262,19 @@
 						"internalType": "bool",
 						"name": "",
 						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "maxSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -284,6 +354,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "publicMintOpen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "renounceOwnership",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -336,6 +419,19 @@
 					}
 				],
 				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "addresses",
+						"type": "address[]"
+					}
+				],
+				"name": "setAllowList",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -504,6 +600,19 @@
 			{
 				"inputs": [],
 				"name": "unpause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "withdraw",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -715,11 +824,11 @@
 			]
 		},
 		"contracts/HooligansNFT.sol": {
-			"keccak256": "0x3977ecfc28b97f34f68be1d8f0cb69b07881a3a1eec53f4e747a8e3e7cbefe8a",
+			"keccak256": "0xf455b5a96e28b604331c953fccad9cd9e603dd75013eea0263ca2e00fb109d9b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://eb5c9e77125ae9a5bb8acb86f4a7632c46ef4461c228da5e809497f490d0bcd7",
-				"dweb:/ipfs/QmQUERnoPiyGLuodvHL6BXRNHXTcgJGqwoDUPmZC9smTSH"
+				"bzz-raw://d42bcf21a0e63e191b73a2a7c567959f41e5484f248896b51c0dbb822b9d1cc2",
+				"dweb:/ipfs/QmdYdwcRetR98W1w5T7WuYR6G7w3B3YpaVdtRsymTmZcjK"
 			]
 		}
 	},
