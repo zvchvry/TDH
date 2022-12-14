@@ -83,19 +83,6 @@
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "Paused",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
 						"indexed": true,
 						"internalType": "address",
 						"name": "from",
@@ -115,19 +102,6 @@
 					}
 				],
 				"name": "Transfer",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "Unpaused",
 				"type": "event"
 			},
 			{
@@ -320,26 +294,6 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "pause",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "paused",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -598,13 +552,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "unpause",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -641,9 +588,6 @@
 				},
 				"ownerOf(uint256)": {
 					"details": "See {IERC721-ownerOf}."
-				},
-				"paused()": {
-					"details": "Returns true if the contract is paused, and false otherwise."
 				},
 				"renounceOwnership()": {
 					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
@@ -709,14 +653,6 @@
 			"urls": [
 				"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
 				"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
-			]
-		},
-		"@openzeppelin/contracts/security/Pausable.sol": {
-			"keccak256": "0x0849d93b16c9940beb286a7864ed02724b248b93e0d80ef6355af5ef15c64773",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://4ddabb16009cd17eaca3143feadf450ac13e72919ebe2ca50e00f61cb78bc004",
-				"dweb:/ipfs/QmSPwPxX7d6TTWakN5jy5wsaGkS1y9TW8fuhGSraMkLk2B"
 			]
 		},
 		"@openzeppelin/contracts/token/ERC721/ERC721.sol": {
@@ -824,11 +760,11 @@
 			]
 		},
 		"contracts/HooligansNFT.sol": {
-			"keccak256": "0x18525d0f1a7b2742cfc0357063d6804576db465533def80dfbeb1fb427576a4f",
+			"keccak256": "0x550f1fade73ba14236d184f8122752023ab72cc6acf8325cc09383d1a7e6e685",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d88ecaa6d95d3b018901fb038e7ebcb5c3ad3bcd164c7d736ab97b37a655dccb",
-				"dweb:/ipfs/QmTUYxmkRDgFBL8wraAgwFRsCgzEdLiwXvUmYdfQmvEscA"
+				"bzz-raw://6e9776b22d57c3884a16a6115f1f58b480674073c3d0c0dc729873ced227a389",
+				"dweb:/ipfs/QmQJAL2DmNdFRtCGzy57SC1qJtQrUJ1Rf9cFdKWxMPvVT2"
 			]
 		}
 	},
